@@ -8,6 +8,7 @@ test.describe("Products Suite", () => {
   });
   test.beforeEach(async ({ page }) => {
     await page.goto(`${process.env.WEB_URL}inventory.html`);
+    await page.waitForURL("**/inventory.html");
   });
 
   test.afterEach(async ({ page }) => {
